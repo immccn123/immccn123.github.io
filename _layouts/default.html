@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    {% seo %}
+    <!---->
 
     <link rel="icon" href="https://avatars.githubusercontent.com/u/41335471" type="image/x-icon" title="immccn123">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
@@ -29,9 +29,9 @@
                 </div>
                 <div class="mdui-tab mdui-color-teal" mdui-tab>
                     {% for item in site.nav %}
-                    <a class="mdui-btn" href="{{ item.link }}">
-                        <strong>{{ item.name }}</strong>
-                    </a>
+                        <a class="mdui-btn" href="{{ item.link }}">
+                            <strong>{{ item.name }}</strong>
+                        </a>
                     {% endfor %}
                 </div>
             </div>

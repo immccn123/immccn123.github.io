@@ -1,6 +1,7 @@
-theme: jekyll-theme-cayman
+# theme: jekyll-theme-cayman
 copyright: "Copyright by immccn123"
 title: immccn123的个人站
+lang: zh-cn
 nav:
   - name: Home
     link: /
