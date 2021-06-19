@@ -7,5 +7,10 @@ nav:
     link: /
   - name: Blog
     link: /blog.html
-  # - name: About
-  #   link: /about.html
+
+links:
+  - name: Xrcluogu
+    d: xrcluogu
+    describe: None
+    url: http://github.com/xrcluogu
+    headimg: https://avatars.githubusercontent.com/u/81732554

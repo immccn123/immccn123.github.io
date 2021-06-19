@@ -1,0 +1,25 @@
+---
+layout: default
+title: friend
+---
+
+<h1>Friends</h1>
+{% for link in site.links %}
+<div class="mdui-card mdui-col-sm-6 mdui-col-md-4">
+  <div class="mdui-card-media">
+    <img src="https://avatars.githubusercontent.com/u/81732554"/>
+    <div class="mdui-card-media-covered">
+      <div class="mdui-card-primary">
+        <div class="mdui-card-primary-title">{{ link.name }}</div>
+        <div class="mdui-card-primary-subtitle">{{ link.d }}</div>
+        <div class="mdui-card-content">{{ link.describe }}</div>
+        <div class="mdui-card-actions">
+          <a href="{{ link.url }}" class="mdui-btn">Goto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <br/>
+{% endfor %}
