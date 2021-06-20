@@ -1,4 +1,8 @@
 # immccn123的个人站：欢迎
+
+![](https://visitor-badge.laobi.icu/badge?page_id=immccn123-home-page)  
+
+
 你好，这里是immccn123的个人站。
 
 欢迎每一位来访者。
