@@ -2,63 +2,78 @@
 <html lang="{{ page.lang | default: site.lang }}">
 
 <head>
-    
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-        
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
 
     <link rel="icon" href="https://avatars.githubusercontent.com/u/41335471" type="image/x-icon" title="immccn123">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <!-- <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"> -->
+    <link rel="stylesheet" href="./css/bootcss.css">
 
-    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+    <!-- <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
-        integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
-    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "733ac978f18c424b9d12f8eb6aa05239"}'></script><!-- End Cloudflare Web Analytics -->
-    <title>{{ post.title | default: site.title }}</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css" -->
+    <!-- integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" /> -->
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "733ac978f18c424b9d12f8eb6aa05239"}'></script><!-- End Cloudflare Web Analytics -->
+    <title>{{ page.title | default: site.title }}</title>
+
 </head>
 
 <body>
-    
+
     <div class="wrapper">
         <header {% unless site.description or site.github.project_tagline %} class="without-description" {% endunless
             %}>
-            <div class="mdui-appbar mdui-color-teal">
-                <div class="mdui-toolbar">
-                    <a href="/" class="mdui-typo-title">{{ site.title | default: site.github.repository_name }}</a>
-                </div>
-                <div class="mdui-tab mdui-color-teal" mdui-tab>
-                    {% for item in site.nav %}
-                        <a class="mdui-btn" href="{{ item.link }}">
-                            <strong>{{ item.name }}</strong>
-                        </a>
-                    {% endfor %}
+            <div class="navbar navbar-expand-lg navbar-light" id="clrnav">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">{{ site.title | default: site.github.repository_name }}</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            {% for item in site.nav %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ item.link }}">{{ item.name }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </header>
-        <section class="mdui-typo mdui-container">
-
+        <br><br><br>
+        <section class="container">
             {{ content }}
-
         </section>
     </div>
 
-    <footer>
-        <script>
-            var _hmt = _hmt || [];
-            (function() {
-              var hm = document.createElement("script");
-              hm.src = "https://hm.baidu.com/hm.js?3460f21486e9073acdeec28771e0ef32";
-              var s = document.getElementsByTagName("script")[0]; 
-              s.parentNode.insertBefore(hm, s);
-            })();
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
-        integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
-        crossorigin="anonymous"></script>
-        <p>{{ site.copyright | default: "copyright not found in _config.yml" }}</p>
+    <footer style="width: 90%; max-width: 90%;">
+        <p>{{ site.copyright }}</p>
     </footer>
+    <script>
+        $(window).on("scroll", function () {
+            //判断向下滑动的距离
+            if ($(window).scrollTop() >= 1080) {
+                //将顶部导航栏固定
+                $("#clrnav").addClass("fixed");
+                $("#clrnav").removeClass("fixout");
+                $("#clrnav").addClass("navbar-dark");
+                $("#clrnav").removeClass("navbar-light");
+            } else {
+                $("#clrnav").removeClass("fixed");
+                $("#clrnav").addClass("fixout");
+                $("#clrnav").removeClass("navbar-dark");
+                $("#clrnav").addClass("navbar-light");
+            }
+        });
+    </script>
 </body>
 
 </html>

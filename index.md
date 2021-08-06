@@ -9,8 +9,7 @@
 
 我是一名初中的OIer，喜欢在平时做一些小项目。
 
-[Blog](https://immccn123.github.io/blog.html) [Projects](https://immccn123.github.io/projects.html) [Friends](https://immccn123.github.io/friend.html)
-
+[Blog](blog.html) [Projects](/projects.html)
 #### 近期制作的项目
 [![qimrand](https://github-readme-stats.vercel.app/api/pin/?username=immccn123&repo=qimrand&show_owner=true)](https://github.com/immccn123/qimrand)
 [![im-transfer](https://github-readme-stats.vercel.app/api/pin/?username=immccn123&repo=im-transfer&show_owner=true)](https://github.com/immccn123/im-transfer)

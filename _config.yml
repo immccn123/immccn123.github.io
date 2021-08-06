@@ -1,31 +1,15 @@
 # theme: jekyll-theme-cayman
-copyright: "Copyright by immccn123"
-title: immccn123的个人站
+copyright: 本站所有内容均使用 CC-BY-NC-SA 4.0 协议进行授权。署名：immccn123
+title: immccn123's blog
 lang: zh-cn
 nav:
   - name: Home
-    link: /
+    link: https://immccn123.xyz
   - name: Blog
+    link: /
+  - name: Posts
     link: /blog.html
-  - name: Projects
+  - name: Projects and Documents
     link: /projects.html
-  - name: Friends
-    link: friend.html
 
-links:
-  - name: Xrcluogu
-    d: xrcluogu
-    describe: 我是一名初一学生,希望通过自己的努力改变世界.
-    url: http://github.com/xrcluogu
-    headimg: https://avatars.githubusercontent.com/u/81732554
-
-proj:
-  - name: qimrand
-    d: 抽学号的小东西
-    describe: 这是一个抽学号的小东西
-    url: http://github.com/immccn123/qimrand/
-  - name: im-transfer
-    d: 一个使用Python中的套接字协议进行两台计算机之间文件或者消息传输的程序。
-    describe: 一个使用Python中的套接字协议进行两台计算机之间文件或者消息传输的程序。本程序现阶段有较多的问题，处于开发阶段，不适合日常使用。出现问题时，欢迎大家提issue.
-    url: http://github.com/immccn123/im-transfer/
 

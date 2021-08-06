@@ -4,15 +4,15 @@ title: Blog
 ---
 <h1>Latest Posts</h1>
 {% for post in site.posts %}
-  <div class="mdui-card">
-    <div class="mdui-card-primary">
-      <div class="mdui-card-primary-title">{{ post.title }}</div>
-      <div class="mdui-card-primary-subtitle">{{ post.subtitle }}</div>
-    </div>
-    <div class="mdui-card-content">{{ post.excerpt }}</div>
+<div class="card position-relative">
+  <div class="card-body">
+    <h5 class="card-title">{{ post.title }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ post.subtitle }}</h6>
+    <p class="card-text">{{ post.excerpt }}</p>
     <div class="mdui-card-actions">
-      <a href="{{ post.url }}" class="mdui-btn">前往阅读</a>
+      <a href="{{ post.url }}" class="card-link stretched-link">Read</a>
     </div>
   </div>
-  <br/>
+</div>
+<br />
 {% endfor %}
