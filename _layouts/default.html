@@ -11,7 +11,7 @@
     <link rel="icon" href="https://avatars.githubusercontent.com/u/41335471" type="image/x-icon" title="immccn123">
     <!-- <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"> -->
     <!-- <link rel="stylesheet" href="./css/bootcss.css"> -->
-    <link href="https://cdn.jsdelivr.net/gh/immccn123/immccn123.github.io/static/css/bootcss.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/gh/immccn123/immccn123.github.io/static/css/bootcss.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -29,7 +29,7 @@
     <div class="wrapper">
         <header {% unless site.description or site.github.project_tagline %} class="without-description" {% endunless
             %}>
-            <div class="navbar navbar-expand-lg navbar-light" id="clrnav">
+            <div class="navbar navbar-expand-lg navbar-light fixed" id="clrnav">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/">{{ site.title | default: site.github.repository_name }}</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
