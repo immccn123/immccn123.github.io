@@ -29,7 +29,7 @@
     <div class="wrapper">
         <header {% unless site.description or site.github.project_tagline %} class="without-description" {% endunless
             %}>
-            <div class="navbar navbar-expand-lg navbar-light fixed" id="clrnav">
+            <div class="navbar navbar-expand-lg navbar-light fixout" id="clrnav">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/">{{ site.title | default: site.github.repository_name }}</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -61,7 +61,7 @@
     <script>
         $(window).on("scroll", function () {
             //判断向下滑动的距离
-            if ($(window).scrollTop() >= 1080) {
+            if ($(window).scrollTop() >= 250) {
                 //将顶部导航栏固定
                 $("#clrnav").addClass("fixed");
                 $("#clrnav").removeClass("fixout");
