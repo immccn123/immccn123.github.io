@@ -2,6 +2,7 @@
 title: 如何展示一个无法拖动的图片
 layout: post
 type: post
+img: https://cdn.jsdelivr.net/gh/immccn123/imimbed/blog/titleimg/2021/08/undrag.jpg
 ---
 > 这篇~~辣鸡~~文章教你利用HTML+CSS展示一个无法在网页上拖动的图片。
 
