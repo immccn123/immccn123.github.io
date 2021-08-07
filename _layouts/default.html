@@ -6,22 +6,36 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
-
-
     <link rel="icon" href="https://avatars.githubusercontent.com/u/41335471" type="image/x-icon" title="immccn123">
-    <!-- <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"> -->
-    <!-- <link rel="stylesheet" href="./css/bootcss.css"> -->
     <link href="https://cdn.jsdelivr.net/gh/immccn123/immccn123.github.io/static/css/bootcss.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <!-- <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css" -->
-    <!-- integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" /> -->
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-        data-cf-beacon='{"token": "733ac978f18c424b9d12f8eb6aa05239"}'></script><!-- End Cloudflare Web Analytics -->
-    <title>{{ page.title | default: site.title }}</title>
+        data-cf-beacon='{"token": "733ac978f18c424b9d12f8eb6aa05239"}'></script>
+    <!-- End Cloudflare Web Analytics -->
 
+    <style>
+        .page_title {
+            /* background-image: url("{{ page.img | default: https://cdn.jsdelivr.net/gh/immccn123/imimbed/empty.png }}"); */
+            /* DEBUG */
+            background-image: url("https://cdn.jsdelivr.net/gh/immccn123/imimbed/empty.png");
+            /* background-image: url("https://bing.ioliu.cn/photo/TanzaniaBeeEater_ZH-CN3246625733?force=download"); */
+            text-align: center;
+            text-shadow: 2px 2px white;
+            height: 500px;
+            width: auto;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* position: relative; */
+        }
+    </style>
+    <title>{{ page.title | default: site.title }}</title>
 </head>
 
 <body>
@@ -49,19 +63,27 @@
                 </div>
             </div>
         </header>
-        <br><br><br>
+        <div class="page_title shadow-lg">
+            <div>
+                <h1>{{ page.title | default: site.title }}</h1>
+                {% if page.type == "post" %}
+                <p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+                {% endif %}
+            </div>
+        </div>
+        <div style="height: 50px;"></div>
         <section class="container">
             {{ content }}
         </section>
     </div>
 
-    <footer style="width: 90%; max-width: 90%;">
+    <footer>
         <p>{{ site.copyright }}</p>
     </footer>
     <script>
         $(window).on("scroll", function () {
             //判断向下滑动的距离
-            if ($(window).scrollTop() >= 250) {
+            if ($(window).scrollTop() >= 454) {
                 //将顶部导航栏固定
                 $("#clrnav").addClass("fixed");
                 $("#clrnav").removeClass("fixout");
