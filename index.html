@@ -11,7 +11,7 @@ subtitle: 欢迎来到immccn123的小站
 {% for post in site.posts %}
 <div class="card position-relative shadow-lg" style="max-width: 500px;">
   <div class="card-body">
-    {{ <img src="{{ post.img }}" class="card-img-top" alt="Read" height="180"> | default:  }}
+    <img src="{{ post.img | default: https://cdn.jsdelivr.net/gh/immccn123/imimbed/nopic.png }}" class="card-img-top" alt="Read" height="180">
     <h5 class="card-title">{{ post.title }}</h5>
     <h6 class="card-subtitle mb-2 text-muted">{{ post.subtitle }}</h6>
     <p class="card-text">{{ post.excerpt }}</p>
