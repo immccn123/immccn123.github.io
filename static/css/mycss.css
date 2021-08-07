@@ -20,6 +20,7 @@ img {
 }
 
 .fixout {
+  background-color: rgba(255, 255, 255, 0.377);
   animation: mysecond 0.37s;
 }
 
