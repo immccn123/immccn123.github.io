@@ -1,0 +1,10 @@
+.page_title {
+    text-align: center;
+    height: 500px;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
