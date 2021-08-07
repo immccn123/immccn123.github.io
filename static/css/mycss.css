@@ -84,5 +84,14 @@ del {
 }
 
 del:hover {
-  color:#000000;
+  color: #000000;
+}
+
+blockquote {
+  border: 1px solid #e9ecef;
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-left-width: 0.25rem;
+  border-radius: 0.25rem;
 }
