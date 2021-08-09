@@ -1,16 +1,20 @@
 ---
 layout: default
 ---
-<div id="article">
-    <article>
-        {{ content }}
-    </article>
+<div style="min-height:1000px">
+    <div id="article">
+        <article>
+            {{ content }}
+        </article>
+    </div>
+    <div id="zw" style="height: 500px;font-size: 2em;">再往下划划呗(。・∀・)ノ</div>
+    <script>$("#article").hide()</script>
+    <div id="vcomments">
+        <hr>再往下滑才有评论(*￣3￣)╭
+    </div>
+    <script>$("#vcomments").hide()</script>
 </div>
-<div id="zw" style="height: 500px;"></div>
-<script>$("#article").hide()</script>
-<div id="vcomments"><hr>再往下滑才有评论(*￣3￣)╭</div>
-<script>$("#vcomments").hide()</script>
-<div id="zw2" style="height: 500px;"></div>
+<div id="zw2" style="height: 1500px;"></div>
 <script>
     var tag = 0;
     function fade() {

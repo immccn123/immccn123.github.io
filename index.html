@@ -7,7 +7,7 @@ sub: "1"
 subtitle: 欢迎来到immccn123的小站
 ---
 <h1 class="" id="lp" hidden>Latest Posts</h1>
-<div id="zw" style="height: 500px;"></div>
+<div id="zw" style="height: 500px; font-size: 2em;">往下划吧§(*￣▽￣*)§</div>
 {% for post in site.posts %}
 <div class="card position-relative shadow-lg fadein" style="max-width: 500px;" hidden>
     <div class="card-body">
@@ -23,10 +23,12 @@ subtitle: 欢迎来到immccn123的小站
         </div>
     </div>
 </div>
-<br />
+<br>
 {% endfor %}
 
-
+<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=K0deRFJEXlNCa0JGRkhIRRoZGAVTUlE"
+    style="text-decoration:none;">给我写信ヾ(≧▽≦*)o</a>
+<br>
 <script>
     function fade() {
         {
@@ -34,6 +36,7 @@ subtitle: 欢迎来到immccn123的小站
                 console.log("text")
                 $("#lp").removeAttr("hidden")
                 $("#lp").addClass("fadein")
+                $("#zw").text("再划点吧§(*^▽^*)§")
             } else if ($(window).scrollTop() >= 600) {
                 $("#zw").hide()
                 $(".card").removeAttr("hidden")

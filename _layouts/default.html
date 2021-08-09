@@ -9,10 +9,10 @@
 
     <link rel="icon" href="https://avatars.githubusercontent.com/u/41335471" type="image/x-icon" title="immccn123">
 
-    <link href="https://cdn.jsdelivr.net/gh/immccn123/immccn123.github.io@main/static/css/bootcss.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/immccn123/immccn123.github.io@main/static/css/mycss.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/gh/immccn123/immccn123.github.io@main/static/css/mycss.css" rel="stylesheet"> -->
 
-    <!-- <link href="/static/css/mycss.css" rel="stylesheet"> -->
+    <link href="/static/css/mycss.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -26,8 +26,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!-- Cloudflare Web Analytics -->
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-        data-cf-beacon='{"token": "733ac978f18c424b9d12f8eb6aa05239"}'></script>
+    <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "733ac978f18c424b9d12f8eb6aa05239"}'></script> -->
     <!-- End Cloudflare Web Analytics -->
     <style>
         .page_title {
@@ -79,7 +79,7 @@
             </div>
         </header>
         <div class="page_title shadow-lg" id="pt">
-            <div>
+            <div style="display: block; flex-direction: row">
                 <h1>{{ page.title | default: site.title }}</h1>
                 {% if page.sub == "1" %}
                 <h6>{{ page.subtitle}}</h6>
@@ -88,6 +88,27 @@
                 <p>{{ page.date | date_to_string }}</p>
                 {% endif %}
             </div>
+            <!-- <div
+                style="flex-direction: row"
+            >
+                 <svg t="1628510844730" class="icon"
+                    style="width: 5em;height: 5em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                    viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6539">
+                    <path
+                        d="M512.356 0c-282.933 0-512 229.067-512 512s229.067 512 512 512 512-229.067 512-512-229.067-512-512-512z m0 969.164c-252.353 0-457.173-204.8-457.173-457.164 0-252.363 204.82-457.154 457.173-457.154C764.711 54.846 969.51 259.638 969.51 512c0 252.365-204.309 457.164-457.154 457.164z"
+                        p-id="6540" fill="#707070"></path>
+                    <path
+                        d="M777.656 397.081l-249.835 265.04s-15.465 17.267-34.055 0l-233.918-265.04c-17.056-16.9-17.056-16.9 0-33.825 0 0 13.985-19.868 32.917 0L510.789 612.51 744.74 363.256h32.916v33.825"
+                        p-id="6541" fill="#707070"></path>
+                    <path d="M259.848 397.081c-15.348-17.693-9.769-24.14 0-33.825 0 0 13.985-19.868 32.917 0"
+                        p-id="6542" fill="#707070"></path>
+                    <path
+                        d="M259.848 397.081c-19.348-18.36-4.801-29.13 0-33.825 0 0 13.985-19.868 32.917 0M744.74 363.256c10.76-10.535 14.093-10.868 32.916 0v33.825"
+                        p-id="6543" fill="#707070"></path>
+                    <path d="M744.74 363.256c10.76-10.535 14.093-10.868 32.916 0 14.511 8.799 14.511 18.465 0 33.825"
+                        p-id="6544" fill="#707070"></path>
+                </svg> 
+            </div> -->
         </div>
         <script>
             $("#pt").hide()
@@ -97,7 +118,7 @@
             {{ content }}
         </section>
     </div>
-    
+
     <footer class="bottom" style="padding-left: 2em;">
         <p>{{ site.copyright }}</p>
     </footer>
