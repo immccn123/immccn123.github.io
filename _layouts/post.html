@@ -1,16 +1,39 @@
 ---
 layout: default
 ---
-
-{{ content }}
-
-<div id="vcomments"></div>
+<div id="article">
+    <article>
+        {{ content }}
+    </article>
+</div>
+<div id="zw" style="height: 500px;"></div>
+<script>$("#article").hide()</script>
+<div id="vcomments"><hr>再往下滑才有评论(*￣3￣)╭</div>
+<script>$("#vcomments").hide()</script>
+<div id="zw2" style="height: 500px;"></div>
 <script>
-    new Valine({
-    el: '#vcomments' ,
-    appId: 'kaXCKtR4DVao6qH1wqdvL8DY-9Nh9j0Va',
-    appKey: 'gPqwNA91MleD4yXgw8ajr3mK',
-    placeholder: '说说呗ψ(._. )>',
-    visitor: true
-});
+    var tag = 0;
+    function fade() {
+        if ($(window).scrollTop() >= 500 && $(window).scrollTop() < 800) {
+            $("#article").show();
+            $("#zw").hide();
+            $("#article").addClass("fadein");
+        } else if ($(window).scrollTop() >= 800 && tag == 0) {
+            $("#vcomments").text("评论正在加载ヾ(•ω•`)o");
+            new Valine({
+                el: '#vcomments',
+                appId: 'kaXCKtR4DVao6qH1wqdvL8DY-9Nh9j0Va',
+                appKey: 'gPqwNA91MleD4yXgw8ajr3mK',
+                placeholder: '说说呗ψ(._. )>',
+                visitor: true
+            });
+            $("#zw2").hide();
+            tag = 1;
+            $("#vcomments").show();
+            $("#vcomments").addClass("fadein");
+        }
+        $(".vempty").text("来评论吧(。・∀・)ノ");
+    }
+    $(window).on("scroll", fade);
+    $(window).on("load", fade);
 </script>

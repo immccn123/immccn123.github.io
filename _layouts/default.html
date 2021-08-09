@@ -12,6 +12,8 @@
     <link href="https://cdn.jsdelivr.net/gh/immccn123/immccn123.github.io@main/static/css/bootcss.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/immccn123/immccn123.github.io@main/static/css/mycss.css" rel="stylesheet">
 
+    <!-- <link href="/static/css/mycss.css" rel="stylesheet"> -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
@@ -29,7 +31,7 @@
     <!-- End Cloudflare Web Analytics -->
     <style>
         .page_title {
-            background-image: url("{{ page.img | default: https://cdn.jsdelivr.net/gh/immccn123/imimbed/empty.png }}");
+            background-image: url("{{ page.img | default: site.empty }}");
         }
     </style>
     {% if page.style == "dark" %}
@@ -56,7 +58,7 @@
     <div class="wrapper">
         <header {% unless site.description or site.github.project_tagline %} class="without-description" {% endunless
             %}>
-            <div class="navbar navbar-expand-lg navbar-light fixout" id="clrnav">
+            <div class="navbar navbar-expand-lg navbar-light fixout fadein" id="clrnav">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/">{{ site.title | default: site.github.repository_name }}</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -76,23 +78,27 @@
                 </div>
             </div>
         </header>
-        <div class="page_title shadow-lg">
+        <div class="page_title shadow-lg" id="pt">
             <div>
                 <h1>{{ page.title | default: site.title }}</h1>
+                {% if page.sub == "1" %}
+                <h6>{{ page.subtitle}}</h6>
+                {% endif %}
                 {% if page.type == "post" %}
                 <p>{{ page.date | date_to_string }}</p>
-                {% elsif page.sub == "1" %}
-                <p>{{ page.subtitle}}</p>
                 {% endif %}
             </div>
         </div>
+        <script>
+            $("#pt").hide()
+        </script>
         <div style="height: 50px;"></div>
         <section class="container">
             {{ content }}
         </section>
     </div>
-
-    <footer class="fixed-bottom" style="padding-left: 2em;">
+    
+    <footer class="bottom" style="padding-left: 2em;">
         <p>{{ site.copyright }}</p>
     </footer>
     <script>
@@ -100,15 +106,38 @@
             //判断向下滑动的距离
             if ($(window).scrollTop() > 0) {
                 //将顶部导航栏固定
+                $("#clrnav").removeClass("navbar-light");
+                $("#clrnav").addClass("navbar-dark");
+                $("#clrnav").addClass("shadow");
+                $("#clrnav").removeClass("fixout");
+                $("#clrnav").addClass("fixed");
+            } else {
+                $("#clrnav").removeClass("navbar-dark");
+                $("#clrnav").addClass("navbar-light");
+                $("#clrnav").removeClass("shadow");
+                $("#clrnav").removeClass("fixed");
+                $("#clrnav").addClass("fixout");
+            }
+        });
+        $(window).on("load", function () {
+            //判断向下滑动的距离
+
+            $("#pt").css("height", $(window).height())
+            $("#pt").show()
+            $("#pt").addClass("fadein")
+            if ($(window).scrollTop() > 0) {
+                //将顶部导航栏固定
                 $("#clrnav").addClass("fixed");
                 $("#clrnav").removeClass("fixout");
                 $("#clrnav").addClass("navbar-dark");
                 $("#clrnav").removeClass("navbar-light");
+                $("#clrnav").addClass("shadow");
             } else {
                 $("#clrnav").removeClass("fixed");
                 $("#clrnav").addClass("fixout");
                 $("#clrnav").removeClass("navbar-dark");
                 $("#clrnav").addClass("navbar-light");
+                $("#clrnav").removeClass("shadow");
             }
         });
     </script>

@@ -6,10 +6,10 @@ img: https://cdn.jsdelivr.net/gh/immccn123/imimbed/blog/titleimg/2021/08/hello.j
 sub: "1"
 subtitle: 欢迎来到immccn123的小站
 ---
-
-<h1>Latest Posts</h1>
+<h1 class="" id="lp" hidden>Latest Posts</h1>
+<div id="zw" style="height: 500px;"></div>
 {% for post in site.posts %}
-<div class="card position-relative shadow-lg" style="max-width: 500px;">
+<div class="card position-relative shadow-lg fadein" style="max-width: 500px;" hidden>
     <div class="card-body">
         <div class="overflow-hidden updown-middle" style="height: 180px;">
             <img src="{{ post.img | default: site.nopic }}" class="card-img-top" alt="Read"
@@ -25,3 +25,22 @@ subtitle: 欢迎来到immccn123的小站
 </div>
 <br />
 {% endfor %}
+
+
+<script>
+    function fade() {
+        {
+            if ($(window).scrollTop() >= 500 && $(window).scrollTop() < 600) {
+                console.log("text")
+                $("#lp").removeAttr("hidden")
+                $("#lp").addClass("fadein")
+            } else if ($(window).scrollTop() >= 600) {
+                $("#zw").hide()
+                $(".card").removeAttr("hidden")
+                $(".card").addClass("fadein")
+            }
+        }
+    }
+    $(window).on("scroll", fade);
+    $(window).on("load", fade);
+</script>
