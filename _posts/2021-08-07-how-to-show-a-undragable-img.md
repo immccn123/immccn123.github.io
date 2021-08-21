@@ -24,4 +24,15 @@ img: https://cdn.jsdelivr.net/gh/immccn123/imimbed/blog/titleimg/2021/08/undrag.
 ```
 完成。效果如上面的封面图。
 
-水博客是一件开心的事情。
+当然，也可以使用JQ实现动态生成：
+```javascript
+$("#photo").css("background-image","url([图像链接])")
+```
+示例如下：
+<button class="btn btn-default" onclick="click()">显示图片</button>
+<div id="ph" style="height: 200px"></div>
+<script>
+    function click() {
+         $("#ph").css("background-image","url(https://cdn.jsdelivr.net/gh/immccn123/imimbed/blog/titleimg/2021/08/undrag.jpg)")
+    }
+</script>
