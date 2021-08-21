@@ -11,8 +11,8 @@ subtitle: 欢迎来到immccn123的小站
 {% for post in site.posts %}
 <div class="card position-relative shadow-lg fadein" style="max-width: 500px;" hidden>
     <div class="card-body">
-        <div class="overflow-hidden updown-middle" style="height: 180px;">
-            <img src="{{ post.img | default: site.nopic }}" class="card-img-top" alt="Read"
+        <div class="card-img-top overflow-hidden updown-middle" style="height: 180px;">
+            <img src="{{ post.img | default: site.nopic }}" alt="Read"
                 style="height: auto;max-width: 500px; width: 100%;">
         </div>
         <h5 class="card-title">{{ post.title }}</h5>
