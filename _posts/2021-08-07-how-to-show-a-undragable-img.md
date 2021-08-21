@@ -29,10 +29,11 @@ img: https://cdn.jsdelivr.net/gh/immccn123/imimbed/blog/titleimg/2021/08/undrag.
 $("#photo").css("background-image","url([图像链接])")
 ```
 示例如下：
-<button class="btn btn-default" onclick="click()">显示图片</button>
-<div id="ph" style="height: 200px"></div>
 <script>
     function click() {
          $("#ph").css("background-image","url(\"https://cdn.jsdelivr.net/gh/immccn123/imimbed/blog/titleimg/2021/08/undrag.jpg\")")
     }
 </script>
+<button class="btn btn-default" onclick="click()">显示图片</button>
+<div id="ph" style="height: 200px"></div>
+
