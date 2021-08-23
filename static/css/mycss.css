@@ -29,6 +29,11 @@ img {
   animation: mysecond 0.37s;
 }
 
+::-webkit-scrollbar {
+  /*隐藏滚轮*/
+  display: none;
+}
+
 .navbar {
   /* position: relative; */
   position: fixed;
