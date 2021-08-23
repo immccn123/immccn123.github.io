@@ -81,7 +81,7 @@
             </div>
         </header>
         <div class="page_title shadow-lg" id="pt">
-            <div style="display: block; flex-direction: row">
+            <div style="display: block; flex-direction: row" id="clrnav">
                 <h1>{{ page.title | default: site.title }}</h1>
                 {% if page.sub == "1" %}
                 <h6>{{ page.subtitle}}</h6>
@@ -126,8 +126,7 @@
         <p>{{ site.copyright }}</p>
     </footer>
     <script>
-        $(window).on("scroll", function () {
-            //判断向下滑动的距离
+        function scr () {
             if ($(window).scrollTop() > 0) {
                 //将顶部导航栏固定
                 $("#clrnav").removeClass("navbar-light");
@@ -142,27 +141,20 @@
                 $("#clrnav").removeClass("fixed");
                 $("#clrnav").addClass("fixout");
             }
+        }
+        $(window).on("scroll", function () {
+            scr();
         });
         $(window).on("load", function () {
             //判断向下滑动的距离
-
             $("#pt").css("height", $(window).height())
             $("#pt").show()
             $("#pt").addClass("fadein")
-            if ($(window).scrollTop() > 0) {
-                //将顶部导航栏固定
-                $("#clrnav").addClass("fixed");
-                $("#clrnav").removeClass("fixout");
-                $("#clrnav").addClass("navbar-dark");
-                $("#clrnav").removeClass("navbar-light");
-                $("#clrnav").addClass("shadow");
-            } else {
-                $("#clrnav").removeClass("fixed");
-                $("#clrnav").addClass("fixout");
-                $("#clrnav").removeClass("navbar-dark");
-                $("#clrnav").addClass("navbar-light");
-                $("#clrnav").removeClass("shadow");
-            }
+            setTimeout(function () {
+                $("#title_txt").show();
+                $("#title_txt").addClass("fadein");
+            },600)
+            scr();
         });
     </script>
 </body>

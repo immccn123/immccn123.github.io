@@ -1,3 +1,8 @@
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 .page_title {
   text-align: center;
   height: 500px;
