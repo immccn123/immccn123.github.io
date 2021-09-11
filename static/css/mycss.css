@@ -1,6 +1,10 @@
+@import url('http://fonts.cdnfonts.com/css/montserrat');
+@import url('http://fonts.cdnfonts.com/css/roboto');
+
 body {
   overflow-x: hidden;
   overflow-y: scroll;
+  font-family: 'Montserrat','Roboto','Microsoft Yahei UI', sans-serif;
 }
 
 .page_title {
