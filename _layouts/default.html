@@ -81,6 +81,15 @@
             </div>
         </header>
         <div class="page_title shadow-lg" id="pt">
+            <div id="loading">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgba(255, 255, 255, 0); display: block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                    <circle cx="50" cy="50" r="43" stroke="#ff9b9e" stroke-width="10" fill="none"></circle>
+                    <circle cx="50" cy="50" r="43" stroke="#419b9e" stroke-width="8" stroke-linecap="round" fill="none">
+                        <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;180 50 50;720 50 50" keyTimes="0;0.5;1"></animateTransform>
+                        <animate attributeName="stroke-dasharray" repeatCount="indefinite" dur="1s" values="64.84247237009333 205.33449583862887;81.05309046261665 189.12387774610556;64.84247237009333 205.33449583862887" keyTimes="0;0.5;1"></animate>
+                    </circle>
+                </svg>
+            </div>
             <div style="display: block; flex-direction: row" id="title_txt">
                 <h1>{{ page.title | default: site.title }}</h1>
                 {% if page.sub == "1" %}
@@ -91,27 +100,6 @@
                 {% endif %}
                 <p><i class="bi bi-person"></i>Author：{{ page.author | default: site.author }}</p>
             </div>
-            <!-- <div
-                style="flex-direction: row"
-            >
-                 <svg t="1628510844730" class="icon"
-                    style="width: 5em;height: 5em;vertical-align: middle;fill: currentColor;overflow: hidden;"
-                    viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6539">
-                    <path
-                        d="M512.356 0c-282.933 0-512 229.067-512 512s229.067 512 512 512 512-229.067 512-512-229.067-512-512-512z m0 969.164c-252.353 0-457.173-204.8-457.173-457.164 0-252.363 204.82-457.154 457.173-457.154C764.711 54.846 969.51 259.638 969.51 512c0 252.365-204.309 457.164-457.154 457.164z"
-                        p-id="6540" fill="#707070"></path>
-                    <path
-                        d="M777.656 397.081l-249.835 265.04s-15.465 17.267-34.055 0l-233.918-265.04c-17.056-16.9-17.056-16.9 0-33.825 0 0 13.985-19.868 32.917 0L510.789 612.51 744.74 363.256h32.916v33.825"
-                        p-id="6541" fill="#707070"></path>
-                    <path d="M259.848 397.081c-15.348-17.693-9.769-24.14 0-33.825 0 0 13.985-19.868 32.917 0"
-                        p-id="6542" fill="#707070"></path>
-                    <path
-                        d="M259.848 397.081c-19.348-18.36-4.801-29.13 0-33.825 0 0 13.985-19.868 32.917 0M744.74 363.256c10.76-10.535 14.093-10.868 32.916 0v33.825"
-                        p-id="6543" fill="#707070"></path>
-                    <path d="M744.74 363.256c10.76-10.535 14.093-10.868 32.916 0 14.511 8.799 14.511 18.465 0 33.825"
-                        p-id="6544" fill="#707070"></path>
-                </svg> 
-            </div> -->
         </div>
         <script>
             $("#pt").hide()
@@ -148,9 +136,10 @@
         });
         $(window).on("load", function () {
             //判断向下滑动的距离
-            $("#pt").css("height", $(window).height())
-            $("#pt").show()
-            $("#pt").addClass("fadein")
+            $("#loading").fadeOut();
+            $("#pt").css("height", $(window).height());
+            $("#pt").show();
+            $("#pt").addClass("fadein");
             setTimeout(function () {
                 $("#title_txt").show();
                 $("#title_txt").addClass("fadein");
