@@ -8,12 +8,13 @@ body {
 }
 
 ::selection {
+  text-shadow: none;
   background-color: #419B9E;
   color: white;
 }
 
-::-moz-selection
-{
+::-moz-selection {
+  text-shadow: none;
   background-color: #419B9E;
   color: white;
 }
