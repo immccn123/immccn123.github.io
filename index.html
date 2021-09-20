@@ -6,16 +6,14 @@ img: https://cdn.jsdelivr.net/gh/immccn123/imimbed/blog/titleimg/2021/08/hello.j
 sub: "1"
 subtitle: 欢迎来到immccn123的小站
 ---
-<h1 class="" id="lp" style="display: none;">Latest Posts</h1>
+<h1 class="" id="lp" style="text-align: center; display: none;">Latest Posts</h1>
 <div id="zw" style="height: 500px; font-size: 2em;">
     <!--往下划吧§(*￣▽￣*)§-->
 </div>
 {% for post in site.posts %}
-<div class="card position-relative shadow-lg fadein" style="max-width: 500px;display: none;">
+<div class="card position-relative shadow-lg fadein" style="margin: 10px auto;text-align: center; display: none;">
     <div class="card-body">
-        <div class="card-img-top overflow-hidden updown-middle" style="height: 180px;">
-            <img src="{{ post.img | default: site.nopic }}" alt="Read" style="height: 180px;width: max-content;">
-        </div>
+        <img class="card-img" src="{{ post.img | default: site.nopic }}" alt="Read" style="max-height: 200px;width: auto;">
         <h5 class="card-title">{{ post.title }}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{ post.subtitle }}</h6>
         <p class="card-text">{{ post.excerpt }}</p>
@@ -27,8 +25,7 @@ subtitle: 欢迎来到immccn123的小站
 <br>
 {% endfor %}
 
-<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=K0deRFJEXlNCa0JGRkhIRRoZGAVTUlE"
-    style="text-decoration:none;">给我写信ヾ(≧▽≦*)o</a>
+
 <br>
 <script>
     function fade() {

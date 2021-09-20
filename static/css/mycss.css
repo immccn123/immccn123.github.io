@@ -47,8 +47,13 @@ img {
 }
 
 ::-webkit-scrollbar {
-  /*隐藏滚轮*/
-  display: none;
+  width: 5px;
+  background: rgba(255, 255, 255, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2.5px;
+  background: #419B9E;
 }
 
 .mynav {
@@ -63,6 +68,30 @@ img {
   width: 100%;
   z-index: 9999;
 }
+
+/* @keyframes scrol {
+  0% {
+    width: 5px;
+  }
+  50% {
+    width: 10px;
+  }
+  100% {
+    width: 20px;
+  }
+}
+
+@-webkit-keyframes scrol {
+  0% {
+    width: 5px;
+  }
+  50% {
+    width: 10px;
+  }
+  100% {
+    width: 20px;
+  }
+} */
 
 @keyframes bl {
   0% {

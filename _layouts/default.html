@@ -119,8 +119,20 @@
         </section>
     </div>
 
-    <footer class="bottom" style="padding-left: 2em;">
-        <p>{{ site.copyright }}</p>
+    <footer style="padding-left: 2em; height: 250px;background-color: rgb(228, 228, 228);">
+        <div style="height: 10px;"></div>
+        <p>
+            <span>{{ site.copyright }}</span>
+            <p style="color: grey;">
+                <span style="font-size: 50px;">{{ site.title }}</span>
+                <br>
+                <span id="jinrishici-sentence">Loading...</span>
+                <br>
+                <a target="_blank"
+                    href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=K0deRFJEXlNCa0JGRkhIRRoZGAVTUlE"
+                    style="text-decoration: none;">给我写信ヾ(≧▽≦*)o</a>
+            </p>
+        </p>
     </footer>
     <script>
         $(window).on("load", function () {
@@ -136,6 +148,7 @@
             }, 1000)
         });
     </script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 </body>
 
 </html>
