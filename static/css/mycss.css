@@ -1,10 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/montserrat');
 @import url('https://fonts.cdnfonts.com/css/roboto');
-
 body {
   overflow-x: hidden;
   overflow-y: scroll;
-  font-family: 'Montserrat', -apple-system,"Noto Sans","Helvetica Neue",Helvetica,"Nimbus Sans L",Arial,"Liberation Sans","PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Source Han Sans CN","Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Zen Hei","ST Heiti",SimHei,"WenQuanYi Zen Hei Sharp",sans-serif;
+  font-family: 'Montserrat', -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 }
 
 ::selection {
@@ -30,18 +29,20 @@ body {
   justify-content: center;
 }
 
+.blur {
+  filter: blur(0px);
+  animation: bl 1s;
+}
+
 img {
   max-width: 100%;
   height: auto;
 }
 
-.fixed {
-  background-color: rgb(65, 155, 158);
-  animation: myfirst 0.5s;
-}
-
 .fixout {
-  background-color: rgba(255, 255, 255, 0.377);
+  /* background-color: rgba(255, 255, 255, 0.377); */
+  background-color: rgba(77, 193, 197, 0.1);
+  backdrop-filter: blur(20px);
   animation: mysecond 0.37s;
 }
 
@@ -50,7 +51,7 @@ img {
   display: none;
 }
 
-.navbar {
+.mynav {
   /* position: relative; */
   position: fixed;
   display: flex;
@@ -61,6 +62,24 @@ img {
   padding-bottom: 0.5rem;
   width: 100%;
   z-index: 9999;
+}
+
+@keyframes bl {
+  0% {
+    filter: blur(100px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+@-webkit-keyframes bl {
+  0% {
+    filter: blur(100px);
+  }
+  100% {
+    filter: blur(0px);
+  }
 }
 
 @keyframes myfirst {
@@ -152,6 +171,7 @@ a {
   color: #419B9E;
   text-decoration: underline;
 }
+
 a:hover {
   color: #367d80;
 }
@@ -161,31 +181,35 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   text-decoration: none;
 }
 
-
 .btn-default {
   color: #fff;
   background-color: #419B9E;
   border-color: #419B9E;
 }
+
 .btn-default:hover {
   color: #fff;
   background-color: #367D80;
   border-color: #367D80;
 }
-.btn-check:focus + .btn-default, .btn-default:focus {
+
+.btn-check:focus+.btn-default, .btn-default:focus {
   color: #fff;
   background-color: #367D80;
   border-color: #367D80;
   box-shadow: 0 0 0 0.25rem rgb(41, 95, 97);
 }
-.btn-check:checked + .btn-default, .btn-check:active + .btn-default, .btn-default:active, .btn-default.active, .show > .btn-default.dropdown-toggle {
+
+.btn-check:checked+.btn-default, .btn-check:active+.btn-default, .btn-default:active, .btn-default.active, .show>.btn-default.dropdown-toggle {
   color: #fff;
   background-color: #367D80;
   border-color: #367D80;
 }
-.btn-check:checked + .btn-default:focus, .btn-check:active + .btn-default:focus, .btn-default:active:focus, .btn-default.active:focus, .show > .btn-default.dropdown-toggle:focus {
+
+.btn-check:checked+.btn-default:focus, .btn-check:active+.btn-default:focus, .btn-default:active:focus, .btn-default.active:focus, .show>.btn-default.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.25rem rgb(41, 95, 97);
 }
+
 .btn-default:disabled, .btn-default.disabled {
   color: #fff;
   background-color: #6a9b9c;

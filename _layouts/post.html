@@ -7,7 +7,7 @@ layout: default
             {{ content }}
         </article>
     </div>
-    <div id="zw" style="height: 500px;font-size: 2em;">再往下划划呗(。・∀・)ノ</div>
+    <div id="zw" style="height: 500px;font-size: 2em;"><!--再往下划划呗(。・∀・)ノ--></div>
     <script>$("#article").hide()</script>
     <div id="vcomments">
         <hr>再往下滑才有评论(*￣3￣)╭
@@ -18,11 +18,10 @@ layout: default
 <script>
     var tag = 0;
     function fade() {
-        if ($(window).scrollTop() >= 500 && $(window).scrollTop() < 800) {
-            $("#article").show();
+        if ($(window).scrollTop() >= 200 && $(window).scrollTop() < 500) {
+            $("#article").fadeIn();
             $("#zw").hide();
-            $("#article").addClass("fadein");
-        } else if ($(window).scrollTop() >= 800 && tag == 0) {
+        } else if ($(window).scrollTop() >= 600 && tag == 0) {
             $("#vcomments").text("评论正在加载ヾ(•ω•`)o");
             new Valine({
                 el: '#vcomments',
@@ -33,8 +32,7 @@ layout: default
             });
             $("#zw2").hide();
             tag = 1;
-            $("#vcomments").show();
-            $("#vcomments").addClass("fadein");
+            $("#vcomments").fadeIn();
         }
         $(".vempty").text("来评论吧(。・∀・)ノ");
     }

@@ -34,6 +34,7 @@
     <style>
         .page_title {
             background-image: url("{{ page.img | default: site.empty }}");
+            backdrop-filter: blur(10px);
         }
     </style>
     {% if page.style == "dark" %}
@@ -60,7 +61,7 @@
     <div class="wrapper">
         <header {% unless site.description or site.github.project_tagline %} class="without-description" {% endunless
             %}>
-            <div class="navbar navbar-expand-lg navbar-light fixout fadein" id="clrnav">
+            <div class="navbar navbar-expand-lg navbar-light fixout mynav" id="clrnav">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/">{{ site.title | default: site.github.repository_name }}</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -80,16 +81,22 @@
                 </div>
             </div>
         </header>
-        <div id="loading" >
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgba(255, 255, 255, 0); display: block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-                    <circle cx="50" cy="50" r="43" stroke="#ff9b9e" stroke-width="10" fill="none"></circle>
-                    <circle cx="50" cy="50" r="43" stroke="#419b9e" stroke-width="8" stroke-linecap="round" fill="none">
-                        <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;180 50 50;720 50 50" keyTimes="0;0.5;1"></animateTransform>
-                        <animate attributeName="stroke-dasharray" repeatCount="indefinite" dur="1s" values="64.84247237009333 205.33449583862887;81.05309046261665 189.12387774610556;64.84247237009333 205.33449583862887" keyTimes="0;0.5;1"></animate>
-                    </circle>
-                </svg>
+        <div id="loading">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                style="margin: auto; background: rgba(255, 255, 255, 0); display: block;" width="200px" height="200px"
+                viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                <circle cx="50" cy="50" r="43" stroke="#ff9b9e" stroke-width="10" fill="none"></circle>
+                <circle cx="50" cy="50" r="43" stroke="#419b9e" stroke-width="8" stroke-linecap="round" fill="none">
+                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s"
+                        values="0 50 50;180 50 50;720 50 50" keyTimes="0;0.5;1"></animateTransform>
+                    <animate attributeName="stroke-dasharray" repeatCount="indefinite" dur="1s"
+                        values="64.84247237009333 205.33449583862887;81.05309046261665 189.12387774610556;64.84247237009333 205.33449583862887"
+                        keyTimes="0;0.5;1"></animate>
+                </circle>
+            </svg>
         </div>
         <div class="page_title shadow-lg" id="pt">
+            <span></span>
             <div style="display: block; flex-direction: row" id="title_txt">
                 <h1>{{ page.title | default: site.title }}</h1>
                 {% if page.sub == "1" %}
@@ -104,6 +111,7 @@
         <script>
             $("#pt").hide()
             $("#title_txt").hide()
+            // $("#clrnav").hide()
         </script>
         <div style="height: 50px;"></div>
         <section class="container">
@@ -115,36 +123,17 @@
         <p>{{ site.copyright }}</p>
     </footer>
     <script>
-        function scr () {
-            if ($(window).scrollTop() > 0) {
-                //将顶部导航栏固定
-                $("#clrnav").removeClass("navbar-light");
-                $("#clrnav").addClass("navbar-dark");
-                $("#clrnav").addClass("shadow");
-                $("#clrnav").removeClass("fixout");
-                $("#clrnav").addClass("fixed");
-            } else {
-                $("#clrnav").removeClass("navbar-dark");
-                $("#clrnav").addClass("navbar-light");
-                $("#clrnav").removeClass("shadow");
-                $("#clrnav").removeClass("fixed");
-                $("#clrnav").addClass("fixout");
-            }
-        }
-        $(window).on("scroll", function () {
-            scr();
-        });
         $(window).on("load", function () {
             //判断向下滑动的距离
             $("#loading").fadeOut();
-            $("#pt").css("height", $(window).height());
-            $("#pt").show();
-            $("#pt").addClass("fadein");
             setTimeout(function () {
-                $("#title_txt").show();
-                $("#title_txt").addClass("fadein");
-            },600)
-            scr();
+                $("#pt").css("height", $(window).height());
+                $("#pt").fadeIn(370);
+                $("#pt").addClass("blur");
+                setTimeout(function () {
+                    $("#title_txt").fadeIn(500);
+                }, 800)
+            }, 1000)
         });
     </script>
 </body>

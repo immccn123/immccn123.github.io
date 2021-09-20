@@ -6,10 +6,12 @@ img: https://cdn.jsdelivr.net/gh/immccn123/imimbed/blog/titleimg/2021/08/hello.j
 sub: "1"
 subtitle: 欢迎来到immccn123的小站
 ---
-<h1 class="" id="lp" hidden>Latest Posts</h1>
-<div id="zw" style="height: 500px; font-size: 2em;">往下划吧§(*￣▽￣*)§</div>
+<h1 class="" id="lp" style="display: none;">Latest Posts</h1>
+<div id="zw" style="height: 500px; font-size: 2em;">
+    <!--往下划吧§(*￣▽￣*)§-->
+</div>
 {% for post in site.posts %}
-<div class="card position-relative shadow-lg fadein" style="max-width: 500px;" hidden>
+<div class="card position-relative shadow-lg fadein" style="max-width: 500px;display: none;">
     <div class="card-body">
         <div class="card-img-top overflow-hidden updown-middle" style="height: 180px;">
             <img src="{{ post.img | default: site.nopic }}" alt="Read" style="height: 180px;width: max-content;">
@@ -33,13 +35,10 @@ subtitle: 欢迎来到immccn123的小站
         {
             if ($(window).scrollTop() >= 200 && $(window).scrollTop() < 300) {
                 console.log("text")
-                $("#lp").removeAttr("hidden")
-                $("#lp").addClass("fadein")
-                $("#zw").text("再划点吧§(*^▽^*)§")
+                $("#lp").fadeIn();
             } else if ($(window).scrollTop() >= 300) {
                 $("#zw").hide()
-                $(".card").removeAttr("hidden")
-                $(".card").addClass("fadein")
+                $(".card").fadeIn();
             }
         }
     }
