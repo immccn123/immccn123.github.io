@@ -1,41 +1,40 @@
 ---
 layout: default
 ---
-<div style="min-height:1000px">
-    <div id="article">
-        <article>
-            {{ content }}
-        </article>
+<div class="card raised">
+    <div style="height: 50px;"></div>
+    <div class="container">
+        <h1>{{ page.title | default: site.title }}</h1>
+        <p><i class="bi bi-calendar3"></i> {{ page.date | date_to_string }} <i class="bi bi-person"></i>Author: {{
+            page.author | default: site.author }}</p>
+        <div id="article">
+            <article>
+                {{ content }}
+            </article>
+        </div>
+        <div style="height: 50px;"></div>
     </div>
-    <div id="zw" style="height: 500px;font-size: 2em;"><!--再往下划划呗(。・∀・)ノ--></div>
-    <script>$("#article").hide()</script>
-    <div id="vcomments">
-        <hr>再往下滑才有评论(*￣3￣)╭
-    </div>
-    <script>$("#vcomments").hide()</script>
 </div>
-<div id="zw2" style="height: 1500px;"></div>
+<br>
+<div class="card raised container">
+    <div style="height: 10px;"></div>
+        <div id="vcomments"></div>
+    <div style="height: 10px;"></div>
+</div>
+<br>
 <script>
-    var tag = 0;
-    function fade() {
-        if ($(window).scrollTop() >= 200 && $(window).scrollTop() < 500) {
-            $("#article").fadeIn();
-            $("#zw").hide();
-        } else if ($(window).scrollTop() >= 600 && tag == 0) {
-            $("#vcomments").text("评论正在加载ヾ(•ω•`)o");
-            new Valine({
-                el: '#vcomments',
-                appId: 'kaXCKtR4DVao6qH1wqdvL8DY-9Nh9j0Va',
-                appKey: 'gPqwNA91MleD4yXgw8ajr3mK',
-                placeholder: '说说呗ψ(._. )>',
-                visitor: true
-            });
-            $("#zw2").hide();
-            tag = 1;
-            $("#vcomments").fadeIn();
-        }
-        $(".vempty").text("来评论吧(。・∀・)ノ");
-    }
-    $(window).on("scroll", fade);
-    $(window).on("load", fade);
+    $("#vcomments").text("评论正在加载ヾ(•ω•`)o");
+    new Valine({
+        el: '#vcomments',
+        appId: 'kaXCKtR4DVao6qH1wqdvL8DY-9Nh9j0Va',
+        appKey: 'gPqwNA91MleD4yXgw8ajr3mK',
+        placeholder: '说说呗ψ(._. )>',
+        visitor: true
+    });
+    $(".vempty").text("来评论吧(。・∀・)ノ");
+    $(".vinput").addClass("form-control");
+    $(".vinput").removeClass("vinput");
+    $(".vheader").addClass("input-group");
+    $(".vbtn").addClass("btn");
+    $(".vbtn").removeClass("vbtn");
 </script>

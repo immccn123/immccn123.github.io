@@ -1,20 +1,30 @@
-@import url('https://fonts.cdnfonts.com/css/montserrat');
-@import url('https://fonts.cdnfonts.com/css/roboto');
+@import url("https://fonts.loli.net/css2?family=Noto+Serif+SC");
 body {
+  background-image: url("https://cdn.jsdelivr.net/gh/immccn123/imimbed@main/dl/dltitle.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   overflow-x: hidden;
   overflow-y: scroll;
-  font-family: 'Montserrat', -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  font-family: "Noto Serif SC", "Helvetica Neue", Helvetica, "Nimbus Sans L",
+    Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB",
+    "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN",
+    "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti",
+    SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+}
+
+.card {
+  opacity: 90%;
 }
 
 ::selection {
   text-shadow: none;
-  background-color: #419B9E;
+  background-color: #419b9e;
   color: white;
 }
 
 ::-moz-selection {
   text-shadow: none;
-  background-color: #419B9E;
+  background-color: #419b9e;
   color: white;
 }
 
@@ -43,6 +53,7 @@ img {
   /* background-color: rgba(255, 255, 255, 0.377); */
   background-color: rgba(77, 193, 197, 0.1);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   animation: mysecond 0.37s;
 }
 
@@ -54,7 +65,7 @@ img {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 2.5px;
-  background: #419B9EAA;
+  background: #419b9eaa;
 }
 
 ::-webkit-scrollbar-track {
@@ -145,9 +156,7 @@ img {
 }
 
 @-webkit-keyframes mysecond
-/* Safari and Chrome */
-
-  {
+/* Safari and Chrome */ {
   0% {
     opacity: 0;
   }
@@ -157,7 +166,7 @@ img {
 }
 
 del {
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -203,7 +212,7 @@ blockquote {
 }
 
 a {
-  color: #419B9E;
+  color: #419b9e;
   text-decoration: underline;
 }
 
@@ -211,42 +220,124 @@ a:hover {
   color: #367d80;
 }
 
-a:not([href]):not([class]), a:not([href]):not([class]):hover {
+a:not([href]):not([class]),
+a:not([href]):not([class]):hover {
   color: inherit;
   text-decoration: none;
 }
 
 .btn-default {
   color: #fff;
-  background-color: #419B9E;
-  border-color: #419B9E;
+  background-color: #419b9e;
+  border-color: #419b9e;
 }
 
 .btn-default:hover {
   color: #fff;
-  background-color: #367D80;
-  border-color: #367D80;
+  background-color: #367d80;
+  border-color: #367d80;
 }
 
-.btn-check:focus+.btn-default, .btn-default:focus {
+.btn-check:focus + .btn-default,
+.btn-default:focus {
   color: #fff;
-  background-color: #367D80;
-  border-color: #367D80;
+  background-color: #367d80;
+  border-color: #367d80;
   box-shadow: 0 0 0 0.25rem rgb(41, 95, 97);
 }
 
-.btn-check:checked+.btn-default, .btn-check:active+.btn-default, .btn-default:active, .btn-default.active, .show>.btn-default.dropdown-toggle {
+.btn-check:checked + .btn-default,
+.btn-check:active + .btn-default,
+.btn-default:active,
+.btn-default.active,
+.show > .btn-default.dropdown-toggle {
   color: #fff;
-  background-color: #367D80;
-  border-color: #367D80;
+  background-color: #367d80;
+  border-color: #367d80;
 }
 
-.btn-check:checked+.btn-default:focus, .btn-check:active+.btn-default:focus, .btn-default:active:focus, .btn-default.active:focus, .show>.btn-default.dropdown-toggle:focus {
+.btn-check:checked + .btn-default:focus,
+.btn-check:active + .btn-default:focus,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.show > .btn-default.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.25rem rgb(41, 95, 97);
 }
 
-.btn-default:disabled, .btn-default.disabled {
+.btn-default:disabled,
+.btn-default.disabled {
   color: #fff;
   background-color: #6a9b9c;
   border-color: #6a9b9c;
+}
+
+@keyframes rasin {
+  0% {
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  100% {
+    -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+@keyframes rasout {
+  0% {
+    -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  100% {
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }
+}
+
+@keyframes rasclick {
+  0% {
+    -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  100% {
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2),
+      0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }
+}
+
+.raised {
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  animation: rasout 300ms;
+}
+
+.raised:hover {
+  -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  animation: rasin 300ms;
+}
+.raised:active {
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  animation: rasclick 300ms;
 }
