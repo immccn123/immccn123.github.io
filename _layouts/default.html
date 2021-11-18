@@ -27,6 +27,11 @@
     <script src="https://unpkg.com/@highlightjs/cdn-assets@11.2.0/highlight.min.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+    <link src="/static/jqui/jquery-ui.min.css" type="stylesheet">
+    <script src="/static/jqui/jquery-ui.min.js"></script>
+
+    <script src="/static/assets/autoload.js"></script>
 
     <title>{{ page.title | default: site.title }}</title>
 </head>
@@ -61,9 +66,13 @@
         {{ content }}
     </section>
     </div>
-
-    <footer style="padding-left: 2em; min-height: 250px; background-color: rgba(228, 228, 228, 0.7)"
-        class="lh">
+    <div class="waifu">
+        <div class="waifu-tips"></div><canvas id="live2d" class="live2d"></canvas>
+        <div class="waifu-tool"><span class="fui-home"></span> <span class="fui-chat"></span> <span
+                class="fui-eye"></span> <span class="fui-user"></span> <span class="fui-photo"></span> <span
+                class="fui-info-circle"></span> <span class="fui-cross"></span></div>
+    </div>
+    <footer style="padding-left: 2em; min-height: 250px; background-color: rgba(228, 228, 228, 0.7)" class="lh">
         <div style="height: 10px;"></div>
         <p>
             <span>{{ site.copyright }}</span>
@@ -72,7 +81,7 @@
         <span id="jinrishici-sentence">Loading...</span>
         <br>
         <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=K0deRFJEXlNCa0JGRkhIRRoZGAVTUlE"
-            style="text-decoration: none;">给我写信ヾ(≧▽≦*)o</a>
+            style="text-decoration: none;" id="mailme">给我写信ヾ(≧▽≦*)o</a>
     </footer>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 </body>

@@ -1,8 +1,10 @@
 @import url("https://fonts.loli.net/css2?family=Noto+Serif+SC");
 body {
-  background-image: url("https://cdn.jsdelivr.net/gh/immccn123/imimbed@main/dl/dltitle.jpg");
+  background-image: url("/bg.jpg");
+  /* filter: blur(4px); */
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   overflow-x: hidden;
   overflow-y: scroll;
   font-family: "Noto Serif SC", "Helvetica Neue", Helvetica, "Nimbus Sans L",

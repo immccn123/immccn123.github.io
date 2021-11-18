@@ -2,12 +2,12 @@
 layout: default
 title: IMMCCN123的小站
 style: light
-img: https://cdn.jsdelivr.net/gh/immccn123/imimbed/blog/titleimg/2021/08/hello.jpg
 ---
+<!-- <h1 style="text-align: center; font-weight: bold; color:white;">IMMCCN123的小站</h1> -->
 <h1 style="text-align: center; font-weight: bold; color:white;">最 新 文 章</h1>
 <h5 style="text-align: center; font-weight: 400; color: gray;">Latest Posts</h5>
 {% for post in site.posts %}
-<div class="card position-relative" style="margin: 10px auto;text-align: center; width:50%;">
+<div class="card position-relative postcard" style="margin: 10px auto;text-align: center; width:50%;">
     <div class="card-body raised">
         <img class="card-img" src="{{ post.img | default: site.nopic }}" alt="Read"
             style="max-height: 200px;width: auto;">
