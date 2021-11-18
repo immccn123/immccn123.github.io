@@ -73,7 +73,8 @@
         { "selector": "c-player div.lyric-button", "text": ["有<span style=\"color:#0099cc;\">歌词</span>的话就能跟着一起唱呢"] },
         { "selector": ".waifu #live2d", "text": ["干嘛呢你，快把手拿开", "鼠…鼠标放错地方了！"] },
         { "selector": ".vpreview-btn", "text": ["点击可以预览评论哦~ 顺带一提，评论支持Markdown~"]},
-        { "selector": "#mailme", "text": ["要给我写邮件吗？"]}
+        { "selector": "#mailme", "text": ["要给我写邮件吗？"]},
+        { "selector": "#btncnt", "text": ["要看看目录吗？"]}
     ],
     "click": [
         {
