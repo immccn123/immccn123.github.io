@@ -1,33 +1,6 @@
 ---
 layout: default
 ---
-{% comment %}
-{% if page.type != "pg" %}
-<div class="offcanvas offcanvas-start" tabindex="-1" id="content" aria-labelledby="ctc">
-    <div class="offcanvas-header">
-        <h5>目录</h5>
-    </div>
-    <div id="toc"></div>
-    <script type="text/javascript">
-        function shww() {
-            document.getElementById("content").toggle()
-        }
-        $(document).ready(function () {
-            $('#toc').toc();
-        });
-    </script>
-</div>
-<button class="btn btn-default" aria-label="ctc" data-bs-toggle="content"
-    style="bottom: 5px; position: fixed; left: 9px; z-index: 100001; width: 75px; height: 75px;"
-    onclick="shww();" id="btncnt">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
-        viewBox="0 0 16 16">
-        <path fill-rule="evenodd"
-            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-    </svg>
-</button>
-{% endif %}
-{% endcomment %}
 <div class="row">
     <div class="card raised col">
         <div style="height: 50px;"></div>

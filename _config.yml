@@ -8,6 +8,8 @@ author: immccn123
 nav:
   - name: Home
     link: /
+  - name: Category
+    link: /catas.html
   - name: Projects and Documents
     link: /projects.html
   - name: Friends

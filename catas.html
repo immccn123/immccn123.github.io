@@ -1,0 +1,17 @@
+---
+layout: post
+title: 分类
+---
+{% for category in site.categories %}
+<h2>{{ category | first }}</h2>
+文章数量： </span>{{ category | last | size }}</span>
+<ul class="list-group list-group-flush">
+    {% for post in category.last %}
+    <li class="list-group-item list-group-item-action position-relative">
+        <i class="bi bi-calendar3"></i> {{ post.date | date:"%d/%m/%Y"}}
+        <a href="{{ post.url }}" class="stretched-link postcard">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
+<br>
+{% endfor %}
