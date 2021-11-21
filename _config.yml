@@ -9,16 +9,16 @@ nav:
   - name: Home
     link: /
   - name: Category
-    link: /catas.html
+    link: /catas/
   - name: Projects and Documents
-    link: /projects.html
+    link: /projects/
   - name: Friends
     link: https://immccn123.xyz/#/friends
   - name: Download
-    link: /download
+    link: /download/
   - name: My Personal Honepage
     link: https://immccn123.xyz/#
   - name: Games Recommend
-    link: /game.html
+    link: /game/
 
 
