@@ -167,15 +167,6 @@ img {
   }
 }
 
-del {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-del:hover {
-  color: #000000;
-}
-
 blockquote {
   border: 1px solid #e9ecef;
   padding: 1.25rem;
